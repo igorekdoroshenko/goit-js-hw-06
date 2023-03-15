@@ -6,13 +6,13 @@
 // <br />
 // <span id="text">Abracadabra!</span>
 
-const input = document.querySelector('#font-size-control');
-const span = document.querySelector('#text');
+const input = document.querySelector("#font-size-control");
+const span = document.querySelector("#text");
 
-input.addEventListener('input', handleInputSpan);
+input.addEventListener("input", handleInputSpan);
 
 function handleInputSpan(event) {
-    const fontSize = event.currentTarget.value;
-    console.log(fontSize);
-    span.style.fontSize = fontSize + 'px';
+  const fontSize = event.currentTarget.value;
+  console.log(fontSize);
+  span.style.fontSize = fontSize + "px";
 }

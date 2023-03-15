@@ -1,15 +1,15 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
 const ingredientsRef = document.querySelector("#ingredients");
 
-const ingredientsel = ingredients.map(ingredient => {
+const ingredientsel = ingredients.map((ingredient) => {
   const listel = document.createElement("li");
   listel.classList = "item";
   listel.textContent = ingredient;
@@ -19,8 +19,6 @@ const ingredientsel = ingredients.map(ingredient => {
 ingredientsRef.append(...ingredientsel);
 
 console.log(ingredientsRef);
-
-
 
 // Напиши скрипт, который для каждого элемента массива ingredients:
 

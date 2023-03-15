@@ -5,13 +5,10 @@
 const inputName = document.querySelector("input");
 const spanName = document.querySelector("span");
 
-inputName.addEventListener('input', () => {
-    if (inputName.value === "") {
-        spanName.textContent = "Anonymous";
-    
-  }
-    else {
-        spanName.textContent = inputName.value; 
+inputName.addEventListener("input", () => {
+  if (inputName.value === "") {
+    spanName.textContent = "Anonymous";
+  } else {
+    spanName.textContent = inputName.value;
   }
 });
-
