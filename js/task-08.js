@@ -11,20 +11,22 @@ form.addEventListener("submit", onFormSubmit);
 
 function onFormSubmit(event) {
   event.preventDefault();
-  const formData = new FormData(event.currentTarget);
+  
+  const formElEmail = form.elements.email;
+  const formElPassword = form.elements.password;
 
-  const formEl = {};
-
-  formData.forEach((value, name) => {
-    if (!value) {
+     if (!formElEmail.value ||!formElPassword.value) {
       alert("Усі поля мають бути заповнені");
-      return;
+       return;
     }
+     else {
+       const formData = {
+         email: formElEmail.value,
+         password: formElPassword.value,
+       };
 
-    formEl[name] = value;
-  });
+       console.log(formData);
 
-  console.log(formEl);
-
-  event.currentTarget.reset();
-}
+    form.reset();
+  }
+};

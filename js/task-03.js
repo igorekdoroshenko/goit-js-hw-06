@@ -14,13 +14,11 @@ const images = [
 ];
 
 const imagesEl = document.querySelector(".gallery");
+imagesEl.style.display = "grid";
+imagesEl.style.listStyle = "none";
+imagesEl.style.gap = "15px";
 
-const galleryEl = images
-  .map(
-    (image) =>
-      `<li><img src="${image.url}" alt="${image.alt}" width = "640" ></li>`
-  )
-  .join("");
+const galleryEl = images.map((image) =>`<li><img src="${image.url}" alt="${image.alt}" width = "640" ></li>`).join("");
 
 imagesEl.insertAdjacentHTML("beforeend", galleryEl);
 
